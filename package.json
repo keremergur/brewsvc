@@ -4,5 +4,8 @@
   "main": "index.js",
   "author": "Kerem Ergür <ergur.kerem@gmail.com>",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "inquirer": "^9.2.11"
+  }
 }
