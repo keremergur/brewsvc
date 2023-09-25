@@ -1,0 +1,8 @@
+{
+  "name": "brewsvc-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kerem Ergür <ergur.kerem@gmail.com>",
+  "license": "MIT",
+  "type": "module"
+}
