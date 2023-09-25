@@ -23,17 +23,19 @@ async function brewServices() {
             }
         ])
         .then(ans => {
-            // Promise.allSettled(ans.map(svc => {
-            //     return function(svc) {
-            //         let cmd = 'brew services ';
-            //         switch(svc.status) {
-            //             case 'none': str+=`start ${svc.name}`; break;
-            //             case 'started': str+=`stop ${svc.name}`; break;
-            //             case 'stopped': str+=`stop ${svc.name}`; break;
-            //         }
-            //         exec(cmd);
-            //     }
-            // }))
+            if(ans.servicepicker == []) return;
+            Promise.allSettled(ans.servicepicker.map(svc => {
+                return ((s) => {
+                    let cmd = 'brew services ';
+                    switch(s.status) {
+                        case 'none': cmd+=`start ${s.name}`; break;
+                        case 'started': cmd+=`stop ${s.name}`; break;
+                        case 'stopped': cmd+=`stop ${s.name}`; break;
+                    }
+                    console.log(cmd);
+                    exec(cmd);
+                })(svc);
+            }));
         });
 }
 
