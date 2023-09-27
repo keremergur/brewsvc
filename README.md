@@ -9,5 +9,6 @@ brew services stop <service>
 
 run with:
 ```sh
-node index.js
+yarn
+node script.js
 ```
