@@ -3,8 +3,7 @@
 replaces:
 ```sh
 brew services list
-brew services start <service>
-brew services stop <service>
+brew services start / stop
 ```
 
 run with:
@@ -12,3 +11,15 @@ run with:
 yarn
 node script.js
 ```
+
+![img](/assets/script.svg)
+
+Select services and enter
+
+![img](/assets/started.svg)
+
+Check again:
+
+![img](/assets/after.svg)
+
+Enter without selection exits program.
